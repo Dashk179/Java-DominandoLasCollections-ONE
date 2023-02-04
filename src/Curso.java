@@ -1,4 +1,4 @@
-public class Curso {
+public class Curso  {
     private String  nombre;
     private int tiempo;
 
@@ -25,6 +25,9 @@ public class Curso {
 
     @Override
     public String toString() {
-        return("Nombre: "  + this.nombre +" || "+" Duracion en hrs : " + this.tiempo);
+        return("Nombre: "  + this.nombre +" || "+" Duracion en hrs : " + this.tiempo +" || ");
     }
+
+
+
 }
