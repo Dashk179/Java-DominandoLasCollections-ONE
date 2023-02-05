@@ -1,3 +1,5 @@
+import model.Curso;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -19,7 +21,7 @@ public class OrdenarListaObjetos {
         cursos.forEach(curso -> System.out.print(curso));
         System.out.println("");
         //   Collections.sort(cursos);
-        //Collections.sort(cursos,Comparator.comparing(Curso::toString));
+        //Collections.sort(cursos,Comparator.comparing(model.Curso::toString));
         cursos.sort(Comparator.comparing(Curso::toString));
         cursos.forEach(curso -> System.out.print(curso));
         cursos.sort(Comparator.comparing(Curso::toString).reversed());

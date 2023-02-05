@@ -1,3 +1,5 @@
+import model.Curso;
+
 import java.util.ArrayList;
 
 public class ListasConObjetos {
