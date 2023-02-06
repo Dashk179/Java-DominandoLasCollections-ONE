@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class ArrayList_add_remote_set {
+public class ArrayList_add_removee_set {
     public static void main(String[] args) {
         String variable1 ="Ejemplo 1";
         String variable2 ="Ejemplo 2";
