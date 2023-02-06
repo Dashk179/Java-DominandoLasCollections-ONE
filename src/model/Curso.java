@@ -6,9 +6,9 @@ public class Curso  {
     private String  nombre;
     private int tiempo;
     private List<Aula> aulaList = new ArrayList<>();
-    private Collection<Alumno> alumnos = new HashSet<>();
+   private Collection<Alumno> alumnos = new HashSet<>();
     //private Collection<Alumno> alumnos = new LinkedHashSet<>(); //Obetener los elementos en el orden que fueron ingresados.
-
+    private Map<String,Alumno> alumnoMap = new HashMap<>();
     public Curso(String nombre, int tiempo) {
         this.nombre = nombre;
         this.tiempo = tiempo;
@@ -48,12 +48,19 @@ public class Curso  {
         this.aulaList.add(aula);
     } //Clase encapsulada
 
-    public void addAlumno(Alumno alumno){this.alumnos.add(alumno);}
+    public void addAlumno(Alumno alumno){
+        this.alumnos.add(alumno);
+        this.alumnoMap.put(alumno.getNo_Control(),alumno);
+    }
 
     public boolean verificaAlumno(Alumno alumno){return this.alumnos.contains(alumno);}
 
     public Collection<Alumno> getAlumnos() {
         return alumnos;
+    }
+
+    public Map<String, Alumno> getAlumnoMap() {
+        return alumnoMap;
     }
 
     @Override
