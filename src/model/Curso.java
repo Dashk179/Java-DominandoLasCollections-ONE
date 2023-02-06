@@ -7,6 +7,7 @@ public class Curso  {
     private int tiempo;
     private List<Aula> aulaList = new ArrayList<>();
     private Collection<Alumno> alumnos = new HashSet<>();
+    //private Collection<Alumno> alumnos = new LinkedHashSet<>(); //Obetener los elementos en el orden que fueron ingresados.
 
     public Curso(String nombre, int tiempo) {
         this.nombre = nombre;

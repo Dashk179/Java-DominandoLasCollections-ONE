@@ -1,7 +1,9 @@
 import model.Alumno;
 import model.Curso;
 
-public class Encapsular_HashSet_Y_buenasPracticas {
+import java.util.Iterator;
+
+public class Otros_TiposDe_Set_y_Iterator {
     public static void main(String[] args) {
         Curso curso1 = new Curso("Geometria",30);
 
@@ -20,10 +22,21 @@ public class Encapsular_HashSet_Y_buenasPracticas {
         curso1.addAlumno(alumno4);
         curso1.addAlumno(alumno5);
         curso1.addAlumno(alumno6);
-        Alumno alumnoNuevo = new Alumno("Luis Miguel","001");
-        System.out.println(alumno1.equals(alumnoNuevo));
-        System.out.println(curso1.getAlumnos().contains(alumnoNuevo));
 
+   //     curso1.getAlumnos().forEach(alumno -> System.out.println(alumno));
+
+        //Iterator la forma es como nosotros vamos a leer un collection
+     Iterator<Alumno> alumnoIterator = curso1.getAlumnos().iterator();
+
+        //El método hasNext sirve para validar si existe valores para recorrer
+        //El va iterar uno por uno hasta llegar al final con .next()
+      while ( alumnoIterator.hasNext()){
+          System.out.println(alumnoIterator.next());
+      }
+
+      //next() significa que es el ultimo elemento y como ya recorrimos todo con el while
+        //nos marcara una excepcion NoSuchElementException
+     // alumnoIterator.next();
 
         }
     }
