@@ -8,7 +8,8 @@ public class Curso  {
     private List<Aula> aulaList = new ArrayList<>();
    private Collection<Alumno> alumnos = new HashSet<>();
     //private Collection<Alumno> alumnos = new LinkedHashSet<>(); //Obetener los elementos en el orden que fueron ingresados.
-    private Map<String,Alumno> alumnoMap = new HashMap<>();
+  //  private Map<String,Alumno> alumnoMap = new HashMap<>();
+    private Map<String,Alumno> alumnoMap = new LinkedHashMap<>();//Se addcionan los elementos en orden.
     public Curso(String nombre, int tiempo) {
         this.nombre = nombre;
         this.tiempo = tiempo;
