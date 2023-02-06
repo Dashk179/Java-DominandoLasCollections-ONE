@@ -3,7 +3,7 @@ import model.Curso;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Clase9 {
+public class MetodosTradicionales_Collections_Y_Streams {
 
     public static final List<List<Integer>> listas = new ArrayList<List<Integer>>() {
         {
